@@ -1,0 +1,35 @@
+# Ignore virtual environment folder (specific to your case)
+insightflow/
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+*.env
+*.log
+*.bak
+*.tmp
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# Node modules (if using React or any JavaScript framework)
+node_modules/
+
+# Build output (for React, Next.js, etc.)
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+.docker
+docker-compose.override.yml
