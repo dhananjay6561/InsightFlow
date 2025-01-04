@@ -94,3 +94,5 @@ if __name__ == "__main__":
     ## Set the SummaryStatisticsInspectionStrategy
     inspector.set_strategy(SummaryStatisticsInspectionStrategy())
     inspector.execute_inspection(df)  ## Execute the data inspection strategy
+    
+    pass
