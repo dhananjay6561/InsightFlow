@@ -57,7 +57,7 @@ class CategoricalUnivariateAnalysis(UnivariateAnalysisStrategy):
         None - Will display a barchart of the feature and print the number of unique values, missing values, and value counts.
         """
         plt.figure(figsize=(10, 6))
-        sns.countplot(x=feature, data=df, palette='muted')  ##palette is the color palette to be used in the bar chart 
+        sns.countplot(x=feature, data=df, palette='muted', hue=feature)  ##palette is the color palette to be used in the bar chart 
         ##muted here means the colors will be less saturated
         plt.title(f"Count of {feature}")
         plt.xlabel(feature)
