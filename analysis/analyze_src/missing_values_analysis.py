@@ -31,7 +31,7 @@ class SimpleMissingValuesAnalysis(MissingValuesAnalysis):
     def visualise_missing_values(self, df: pd.DataFrame):
         """Visualize missing values in the dataframe."""
         print("\nVisualizing Missing Values")
-        sns.heatmap(df.isnull(), cbar=False, cmap='viridis')
+        sns.heatmap(df.isnull(), cbar=False, cmap='viridis')  ##viridis is a color map for missing values(purple -> no missing values, yellow -> missing values)
         plt.title("Missing Values in the Data")
         plt.show()
 
