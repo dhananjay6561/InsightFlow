@@ -58,7 +58,7 @@ class NumericalCategoricalBivariateAnalysisStrategy(BivariateAnalysisStrategy):
         None - Will display a boxplot of the numerical feature grouped by the categories in the categorical feature.
         """
         plt.figure(figsize=(10, 6))
-        sns.boxplot(x=feature2, y=feature1, data=df)
+        sns.boxplot(x=feature2, y=feature1, data=df)  ##Box represents the interquartile range which means 50% of the data lies within the box
         plt.title(f"Relationship between {feature1} and {feature2}")
         plt.xlabel(feature2)
         plt.ylabel(feature1)
@@ -80,7 +80,7 @@ class CategoricalBivariateAnalysisStrategy(BivariateAnalysisStrategy):
         """
         plt.figure(figsize=(10, 6))
         crosstab = pd.crosstab(df[feature1], df[feature2])
-        sns.heatmap(crosstab, annot=True, cmap='viridis')
+        sns.heatmap(crosstab, annot=True, cmap='viridis')  ##heatmao represents the frequency of the data 
         plt.title(f"Relationship between {feature1} and {feature2}")
         plt.xlabel(feature2)
         plt.ylabel(feature1)
