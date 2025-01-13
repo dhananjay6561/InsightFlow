@@ -2,7 +2,6 @@ import click
 from pipelines.training_pipeline import ml_pipeline
 from zenml.integrations.mlflow.mlflow_utils import get_tracking_uri
 
-
 @click.command()
 def main():
     """
@@ -12,7 +11,7 @@ def main():
     run = ml_pipeline()
 
     # Retrieve the output of the model_building_step
-    trained_model = run.steps["model_building_step"].outputs["output_name"]
+    trained_model = run.steps["model_building_step"].outputs["sklearn_pipeline"]
     print(f"Trained Model Type: {type(trained_model)}")
 
     # Print MLflow UI instructions

@@ -3,7 +3,6 @@ from typing import Annotated
 
 import mlflow
 import pandas as pd
-from sklearn.base import RegressorMixin
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LinearRegression
@@ -11,18 +10,18 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 from zenml import ArtifactConfig, step
 from zenml.client import Client
+from zenml import Model
 
 # Get the active experiment tracker from ZenML
 experiment_tracker = Client().active_stack.experiment_tracker
-from zenml import Model
 
+# Define the ZenML model
 model = Model(
     name="insightflow",
     version=None,
     license="Apache 2.0",
     description="Price prediction model for houses.",
 )
-
 
 @step(enable_cache=False, experiment_tracker=experiment_tracker.name, model=model)
 def model_building_step(
