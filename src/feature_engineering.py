@@ -200,7 +200,7 @@ class FeatureEngineer:
 # Example usage
 if __name__ == "__main__":
     # Example dataframe
-      df = pd.read_csv('../extracted-data/your_data_file.csv')
+      df = pd.read_csv('../../extracted_data/AmesHousing.csv')
 
     # Log Transformation Example
       log_transformer = FeatureEngineer(LogTransformation(features=['SalePrice', 'Gr Liv Area']))
