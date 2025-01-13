@@ -17,7 +17,7 @@ experiment_tracker = Client().active_stack.experiment_tracker
 from zenml import Model
 
 model = Model(
-    name="prices_predictor",
+    name="insightflow",
     version=None,
     license="Apache 2.0",
     description="Price prediction model for houses.",
