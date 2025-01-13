@@ -9,3 +9,7 @@ seaborn==0.13.2
 statsmodels==0.14.1
 zenml==0.64.0
 ipykernel==3.11.7
+fastapi==0.103.1
+uvicorn==0.23.2
+pyjwt==2.8.0
+python-multipart==0.0.6
