@@ -1,9 +1,9 @@
 import pandas as pd
 from src.ingest_data import DataIngestorFactory
-from zenml import Step
+from zenml import step
 
 
-@Step
+@step
 def data_ingestion_step(file_path: str) -> pd.DataFrame:
     '''Data Ingestion Step
     
@@ -16,11 +16,11 @@ def data_ingestion_step(file_path: str) -> pd.DataFrame:
         pd.DataFrame: The ingested data.
     '''
     
-    ##Detect the file type
-    file_extension=".zip"
+    ## Detect the file type
+    file_extension = ".zip"  # Assuming the file is a ZIP file
 
-    ##Ingest the data
-    data_ingestor = DataIngestorFactory.get_data_ingestor(file_extension)
+    ## Ingest the data
+    data_ingestor = DataIngestorFactory.get_ingestor(file_extension) 
     
-    df=data_ingestor.ingest_data(file_path)
+    df = data_ingestor.ingest(file_path) 
     return df
