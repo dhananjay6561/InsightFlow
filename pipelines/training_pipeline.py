@@ -13,6 +13,7 @@ from steps.handle_missing_values_step import handle_missing_values_step
 from steps.feature_engineering_step import feature_engineering_step
 from steps.outlier_detection_step import outlier_detection_step
 from steps.data_splitter_step import data_splitter_step
+from steps.model_building_step import model_building_step
 
 ## Define a pipeline
 @pipeline(
@@ -44,6 +45,9 @@ def ml_pipeline():
 
     # Data Splitting Step
     X_train, X_test, y_train, y_test = data_splitter_step(clean_data, target_column="SalePrice")
+
+    ## Model Building
+    model = model_building_step(X_train=X_train, y_train=y_train)
 
 # Run the pipeline
 if __name__ == "__main__":
